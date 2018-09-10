@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import LeftNav from './LeftNav';
+import {BrowserRouter as Router} from 'react-router-dom';
+import Main from './Main';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <LeftNav />
-      </div>
+      <Router>
+        <Main />
+      </Router>
     );
   }
 }

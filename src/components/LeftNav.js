@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
-import '../css/LeftNav.css'
+import '../css/LeftNav.css';
+import {Link} from 'react-router-dom';
 
 class LeftNav extends Component {
     render(){
      return ( 
             <div className="leftNav">
-                <p>Home</p>
-                <p>Profile</p>
-                <p>Admin</p>
+                <Link to="/"><p>Home</p></Link>
+                <Link to="/profile"><p>Profile</p></Link>
+                <Link to="/admin"><p>Admin</p></Link>
             </div>
         )
     }
