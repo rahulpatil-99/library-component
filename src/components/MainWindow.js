@@ -1,16 +1,19 @@
 import React, {Component} from 'react';
 import Home from './Home';
 import Reader from './Reader';
-import Admin from './Admin';
+import AdminForm from './AdminForm';
+import Admin from './Admin'; 
 import {Switch, Route } from "react-router-dom";
+import '../css/MainWindow.css';
 
 class MainWindow extends Component{
     render(){
         return (
-            <div>
+            <div className="mainWindow">
             <Switch>
                 <Route exact path="/" component={Home} />
-                <Route path="/profile" component={Reader} />
+                <Route path="/profile-form" component={Reader} />
+                <Route path="/admin-form" component={AdminForm} />
                 <Route path="/admin" component={Admin} />
             </Switch>
             </div>
