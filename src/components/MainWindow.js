@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Home from './Home';
+import Home from '../containers/Home';
 import Reader from './Reader';
 import AdminForm from './AdminForm';
 import Admin from './Admin'; 
