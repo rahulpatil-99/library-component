@@ -1,10 +1,6 @@
 import { connect } from 'react-redux';
 import Home from '../components/Home';
-
-const filterBookAction = text => ({
-        type: "FILTER_BOOKS",
-        searchText:text
-});
+import { filterBookAction, setSearchTextAction } from '../actions/home-action';
 
 const mapStateToProps = state => ({
         books: state.homeReducer.books,
@@ -12,8 +8,11 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    filterBooks: (text) => {
-        dispatch(filterBookAction(text));
+    filterBooks: () => {
+        dispatch(filterBookAction());
+    },
+    setSearchText: (text) => {
+        dispatch(setSearchTextAction(text));
     }
 });
 

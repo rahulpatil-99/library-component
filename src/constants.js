@@ -1,0 +1,2 @@
+export const FILTER_BOOKS = "FILTER_BOOKS";
+export const SET_SEARCH_TEXT = "SET_SEARCH_TEXT";
