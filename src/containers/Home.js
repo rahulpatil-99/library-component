@@ -8,12 +8,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    filterBooks: () => {
-        dispatch(filterBookAction());
-    },
-    setSearchText: (text) => {
-        dispatch(setSearchTextAction(text));
-    }
+    filterBooks: () => dispatch(filterBookAction()),
+    setSearchText: (text) => dispatch(setSearchTextAction(text))
 });
 
 export default connect(mapStateToProps,mapDispatchToProps)(Home);

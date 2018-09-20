@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Home from '../containers/Home';
 import Reader from './Reader';
 import AdminForm from './AdminForm';
-import Admin from './Admin'; 
+import Admin from '../containers/Admin'; 
 import {Switch, Route } from "react-router-dom";
 import '../css/MainWindow.css';
 

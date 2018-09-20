@@ -8,7 +8,7 @@ class LeftNav extends Component {
             <div className="leftNav">
                 <Link to="/"><p>Home</p></Link>
                 <Link to="/profile-form"><p>Profile</p></Link>
-                <Link to="/admin-form"><p>Admin</p></Link>
+                <Link to="/admin"><p>Admin</p></Link>
             </div>
         )
     }

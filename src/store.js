@@ -1,8 +1,10 @@
-import { createStore, combineReducers } from 'redux'
-import homeReducer from './reducers/home-reducer'
+import { createStore, combineReducers } from 'redux';
+import homeReducer from './reducers/home-reducer';
+import adminReducer from  './reducers/admin-reducer';
 
 const reducer = combineReducers({
- homeReducer
+ homeReducer,
+ adminReducer
 });
 
 const store = createStore(reducer,
