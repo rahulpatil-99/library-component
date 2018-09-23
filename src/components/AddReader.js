@@ -1,6 +1,8 @@
 import React from 'react';
 
-const AddReader = ({ handleReaderName, handleAddress, handleDOB, addReader, readerName, address, dob}) => {
+const AddReader = ({addReaderDispatch, addReaderData}) => {
+    const {handleReaderName, handleAddress, handleDOB, addReader} = addReaderDispatch;
+    const {readerName, address, dob} = addReaderData;
     return (
         <div>
             <label for="name">Name:</label>
