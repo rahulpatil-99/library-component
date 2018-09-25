@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/rahulpatil-99/library-component#readme",
   "dependencies": {
+    "axios": "^0.18.0",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-redux": "^5.0.7",

@@ -1,13 +1,15 @@
 import { connect } from 'react-redux';
 import Admin from '../components/Admin';
-import {setReaderNameAction, setAddressAction, setDOBAction, addReaderAction,
+import {setReaderNameAction, setLastNameAction, setDOBAction, addReaderAction,
         setBookTitle, setIsbn, setAuthor, setCopies, addBookAction} from '../actions/admin-action';
+import {createReader} from '../actions/backend-actions';
 
 const mapStateToProps = (state) => ({
     addReaderData: {
         readerName: state.adminReducer.readerName,
-        address: state.adminReducer.address,
-        dob: state.adminReducer.dob
+        lastName: state.adminReducer.lastName,
+        dob: state.adminReducer.dob,
+        readerAddMsg: state.adminReducer.readerAddMsg
     },
     addBookData: {
         title: state.adminReducer.title,
@@ -20,9 +22,12 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = dispatch =>({
     addReaderDispatch: {
         handleReaderName: readerName => dispatch(setReaderNameAction(readerName)),
-        handleAddress: address => dispatch(setAddressAction(address)),
+        handleLastName: lastName => dispatch(setLastNameAction(lastName)),
         handleDOB: dob => dispatch(setDOBAction(dob)),
-        addReader: () => dispatch(addReaderAction())
+        addReader: reader =>{
+            dispatch(addReaderAction());
+            createReader(dispatch,reader);
+        }
     },
     addBookDispatch: {
         handleTitle: title => dispatch(setBookTitle(title)),

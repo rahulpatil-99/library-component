@@ -1,4 +1,4 @@
-import {SET_READER_NAME, SET_ADDRESS, SET_DOB, ADD_READER,
+import {SET_READER_NAME, SET_LASTNAME, SET_DOB, ADD_READER,
         SET_BOOK_TITLE, SET_ISBN, SET_AUTHOR, SET_COPIES, ADD_BOOK } from "../constants";
 
 export const setReaderNameAction = name => ({
@@ -6,9 +6,9 @@ export const setReaderNameAction = name => ({
     readerName: name
 });
 
-export const setAddressAction = address => ({
-    type: SET_ADDRESS,
-    address: address
+export const setLastNameAction = lastName => ({
+    type: SET_LASTNAME,
+    lastName: lastName
 });
 
 export const setDOBAction = dob => ({
